@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
 <item>
-    <bitmap
-        android:gravity="fill"
-        android:src="(@drawable/homsetContentView(R.layout.activity_main)e"/>
+    <bitmap android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="fill" android:src="@drawable/home" />
 </item>
 </selector>
