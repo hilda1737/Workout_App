@@ -1,5 +1,6 @@
 package com.getfit.workoutlog
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -8,40 +9,56 @@ import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
 
 class LoginActivity : AppCompatActivity() {
-    lateinit var etemail: TextInputEditText
+    lateinit var etEmail: TextInputEditText
+    lateinit var tilEmail: TextInputLayout
     lateinit var btnlogin: Button
-    lateinit var etpassword: TextInputEditText
+    lateinit var etPassword: TextInputEditText
     lateinit var tvsighnup: TextView
+    lateinit var tilPassword: TextInputLayout
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
         btnlogin = findViewById(R.id.btnlogin)
-        etemail = findViewById(R.id.etemail)
+       etEmail = findViewById(R.id.etEmail)
         tvsighnup = findViewById(R.id.tvsighnup)
-        etpassword = findViewById(R.id.etpassword)
-        btnlogin.setOnClickListener { validatelogin() }
+        etPassword = findViewById(R.id.etPassword)
+        tilEmail = findViewById(R.id.tilEmail)
+        tilPassword = findViewById(R.id.tilPassword)
+
+        tvsighnup.setOnClickListener {
+            val intent=Intent(this,SighnupActivity::class.java)
+            startActivity(intent)
+
+        }
+
+        btnlogin.setOnClickListener {
+            validatelogin()
+        }
     }
+
 
     fun validatelogin() {
         var error = false
-        etemail.error=null
-        etpassword.error=null
-        var email = etemail.text.toString()
+        tilEmail.error = null
+        tilPassword.error = null
+        var email = etEmail.text.toString()
         if (email.isBlank()) {
-            etemail.error = "Error is required "
-            error=true
+            tilEmail.error = "Error is required "
+            error = true
+
 
         }
 
-        var password = etpassword.text.toString()
-        if(password.isBlank()){
-            etpassword.error="password is required"
-            error=true
-        }
-        if (!error){
+            var password = etPassword.text.toString()
+            if(password.isBlank()){
+                tilPassword.error="Password is required"
+                error=true
+            }
+        if(!error){
 
         }
     }
-
 }
