@@ -13,7 +13,7 @@ class LoginActivity : AppCompatActivity() {
     lateinit var tilEmail: TextInputLayout
     lateinit var btnlogin: Button
     lateinit var etPassword: TextInputEditText
-    lateinit var tvsighnup: TextView
+    lateinit var tvSignUp:TextView
     lateinit var tilPassword: TextInputLayout
 
 
@@ -23,19 +23,20 @@ class LoginActivity : AppCompatActivity() {
         setContentView(R.layout.activity_login)
         btnlogin = findViewById(R.id.btnlogin)
        etEmail = findViewById(R.id.etEmail)
-        tvsighnup = findViewById(R.id.tvsighnup)
+       tvSignUp=findViewById(R.id.tvSignUp)
         etPassword = findViewById(R.id.etPassword)
         tilEmail = findViewById(R.id.tilEmail)
         tilPassword = findViewById(R.id.tilPassword)
 
-        tvsighnup.setOnClickListener {
+        tvSignUp.setOnClickListener {
             val intent=Intent(this,SighnupActivity::class.java)
             startActivity(intent)
-
         }
 
-        btnlogin.setOnClickListener {
-            validatelogin()
+
+
+
+        btnlogin.setOnClickListener {validatelogin()
         }
     }
 

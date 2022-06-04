@@ -12,12 +12,12 @@ class SighnupActivity : AppCompatActivity() {
     lateinit var etEmail3: TextInputEditText
     lateinit var tilEmail3: TextInputLayout
     lateinit var btnSignUp: Button
-    lateinit var etpassword: TextInputEditText
-    lateinit var tvsighnup: TextView
+    lateinit var etMypassword: TextInputEditText
+
     lateinit var etFirstname: TextInputEditText
-    lateinit var etSecondname: TextInputEditText
+    lateinit var etSecond: TextInputEditText
     lateinit var tilFirstname: TextInputLayout
-    lateinit var tilsecondname: TextInputLayout
+    lateinit var tilSecond: TextInputLayout
     lateinit var tilpassword: TextInputLayout
     lateinit var tilConfirm: TextInputLayout
     lateinit var etConfirm: TextInputEditText
@@ -31,36 +31,37 @@ class SighnupActivity : AppCompatActivity() {
         setContentView(R.layout.activity_sighnup)
         btnSignUp= findViewById(R.id.btnSignUp)
         etEmail3 = findViewById(R.id.etEmail3)
-        etpassword = findViewById(R.id.etpassword)
+        etMypassword = findViewById(R.id.etMypassword)
         tilFirstname = findViewById(R.id.tilFirstname)
-        tilpassword=findViewById(R.id.tilPassword)
-        tilsecondname = findViewById(R.id.tilsecondname)
-        tilConfirm = findViewById(R.id.tilpassword)
+        tilpassword=findViewById(R.id.tilpassword)
+        tilSecond = findViewById(R.id.tilSecond)
+        tilConfirm = findViewById(R.id.tilConfirm)
         etConfirm = findViewById(R.id.etConfirm)
-        etpassword = findViewById(R.id.etPassword)
-        etSecondname = findViewById(R.id.etSecondname)
+
+        etSecond= findViewById(R.id.etSecond)
         etFirstname=findViewById(R.id.etFirstname)
         tilEmail3=findViewById(R.id.tilEmail3)
         tvLogin=findViewById(R.id.tvLogin)
-        tvsighnup=findViewById(R.id.tvsighnup)
+
 
         tvLogin.setOnClickListener {
-            var intent=Intent(this,LoginActivity::class.java)
+            val intent=Intent(this,LoginActivity::class.java)
             startActivity((intent))
         }
         btnSignUp.setOnClickListener {
             validateSignUp()
         }
+
     }
 
 
 fun validateSignUp() {
     var error = false
-    etEmail3.error = null
-    etpassword.error = null
-    etFirstname.error=null
-    etSecondname.error=null
-    etConfirm.error=null
+    tilEmail3.error = null
+    tilpassword.error = null
+    tilFirstname.error=null
+    tilSecond.error=null
+    tilConfirm.error=null
     var email = etEmail3.text.toString()
     if (email.isBlank()) {
         tilEmail3.error = "Error is required "
@@ -73,13 +74,13 @@ fun validateSignUp() {
             tilFirstname.error = "First name is required"
             error = true
         }
-         var second=etSecondname.text.toString()
+         var second=etSecond.text.toString()
         if (second.isBlank()) {
-            tilsecondname.error = "Last name is required"
+            tilSecond.error = "Last name is required"
             error = true
         }
 
-         var password=etpassword.text.toString()
+         var password=etMypassword.text.toString()
 
         if (password.isBlank()) {
             tilpassword.error = "Password is required"
