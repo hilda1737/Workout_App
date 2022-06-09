@@ -23,7 +23,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:startIconDrawable="@drawable/ic_baseline_person_24">
+        app:startIconDrawable="@drawable/ic_baseline_person_24"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etFirstname"
@@ -31,6 +32,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/first_name"
+            android:textColor="#0E0E0E"
+            android:textColorHint="#2272B1"
             android:textSize="24sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -44,14 +47,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tilFirstname"
-        app:startIconDrawable="@drawable/ic_baseline_person_24">
+        app:startIconDrawable="@drawable/ic_baseline_person_24"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etSecond"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/second_name" />
+            android:hint="@string/second_name"
+            android:textColorHint="#FF5722" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -66,13 +71,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tilSecond"
         app:passwordToggleEnabled="false"
-        app:startIconDrawable="@drawable/ic_baseline_person_24">
+        app:startIconDrawable="@drawable/ic_baseline_person_24"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etEmail3"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="#FF5722"
             android:textSize="20sp"
             app:textInputLayoutFocusedRectEnabled="false" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -88,7 +95,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tilEmail3"
         app:passwordToggleEnabled="true"
-        app:startIconDrawable="@drawable/ic_baseline_vpn_key_24">
+        app:startIconDrawable="@drawable/ic_baseline_vpn_key_24"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etMypassword"
@@ -123,7 +131,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tilpassword"
         app:passwordToggleEnabled="true"
-        app:startIconDrawable="@drawable/ic_baseline_vpn_key_24">
+        app:startIconDrawable="@drawable/ic_baseline_vpn_key_24"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etConfirm"
@@ -132,6 +141,7 @@
             android:layout_height="wrap_content"
             android:hint="@string/confirm_password"
             android:inputType="textEmailAddress"
+            android:textColor="#2196F3"
             android:textSize="20sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
