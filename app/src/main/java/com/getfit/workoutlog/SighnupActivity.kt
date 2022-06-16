@@ -94,7 +94,6 @@ fun validateSignUp() {
         }
 
          var password=etMypassword.text.toString()
-
         if (password.isBlank()) {
             tilpassword.error = "Password is required"
             error = true
