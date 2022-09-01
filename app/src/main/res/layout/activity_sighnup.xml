@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SighnupActivity">
+    tools:context=".UI.SighnupActivity">
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline3"
@@ -112,18 +112,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="24dp"
+        android:layout_marginBottom="22dp"
         android:text="@string/sign_up"
+        app:layout_constraintBottom_toTopOf="@+id/tvLogin"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tilConfirm" />
+        app:layout_constraintTop_toBottomOf="@+id/tilPhonenumber" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilConfirm"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="363dp"
-        android:layout_height="wrap_content"
 
+        android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="24dp"
@@ -131,8 +135,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tilpassword"
         app:passwordToggleEnabled="true"
-        app:startIconDrawable="@drawable/ic_baseline_vpn_key_24"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        app:startIconDrawable="@drawable/ic_baseline_vpn_key_24">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etConfirm"
@@ -150,12 +153,33 @@
         android:layout_width="317dp"
         android:layout_height="43dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="24dp"
+        android:layout_marginBottom="89dp"
         android:text="@string/log_in"
         android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnSignUp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilPhonenumber"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="13dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnSignUp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tilConfirm">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Number" />
+    </com.google.android.material.textfield.TextInputLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

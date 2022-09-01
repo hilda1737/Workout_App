@@ -1,14 +1,9 @@
-package com.getfit.workoutlog
+package com.getfit.workoutlog.UI
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.widget.Button
-import android.widget.TextView
 import com.getfit.workoutlog.databinding.ActivityLoginBinding
-import com.google.android.material.textfield.TextInputEditText
-import com.google.android.material.textfield.TextInputLayout
 
 class LoginActivity : AppCompatActivity() {
   lateinit var binding:ActivityLoginBinding
@@ -23,12 +18,12 @@ class LoginActivity : AppCompatActivity() {
 
 
         binding.tvSignUp.setOnClickListener {
-            val intent=Intent(this,SighnupActivity::class.java)
+            val intent=Intent(this, SighnupActivity::class.java)
             startActivity(intent)
         }
         binding.btnlogin.setOnClickListener {
             validatelogin()
-            startActivity(Intent(this,HomeActivity::class.java))
+            startActivity(Intent(this, HomeActivity::class.java))
         }
     }
 
@@ -52,7 +47,7 @@ class LoginActivity : AppCompatActivity() {
                 error=true
             }
         if(!error){
-            startActivity(Intent(this,HomeActivity::class.java))
+            startActivity(Intent(this, HomeActivity::class.java))
 
         }
     }

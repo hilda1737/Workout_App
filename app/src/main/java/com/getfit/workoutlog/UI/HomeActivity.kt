@@ -1,8 +1,9 @@
-package com.getfit.workoutlog
+package com.getfit.workoutlog.UI
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.FragmentContainerView
+import com.getfit.workoutlog.R
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class HomeActivity : AppCompatActivity() {
@@ -35,7 +36,10 @@ class HomeActivity : AppCompatActivity() {
 
                 }
                 R.id.profile -> {
-                    var transaction = supportFragmentManager.beginTransaction().replace(R.id.fcvHome,ProfileFragment()).commit()
+                    var transaction = supportFragmentManager.beginTransaction().replace(
+                        R.id.fcvHome,
+                        ProfileFragment()
+                    ).commit()
                     true
                 }
                 else->false

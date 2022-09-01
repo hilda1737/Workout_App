@@ -1,17 +1,11 @@
-package com.getfit.workoutlog
+package com.getfit.workoutlog.UI
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.provider.ContactsContract
 import android.util.Patterns
-import android.widget.Button
-import android.widget.TextView
-import com.getfit.workoutlog.databinding.ActivityLoginBinding
+import com.getfit.workoutlog.R
 import com.getfit.workoutlog.databinding.ActivitySighnupBinding
-import com.google.android.material.textfield.TextInputEditText
-import com.google.android.material.textfield.TextInputLayout
-import java.util.regex.Pattern
 
 class SighnupActivity : AppCompatActivity() {
    lateinit var binding: ActivitySighnupBinding
@@ -25,7 +19,7 @@ class SighnupActivity : AppCompatActivity() {
 
 
         binding.tvLogin.setOnClickListener {
-            val intent=Intent(this,LoginActivity::class.java)
+            val intent=Intent(this, LoginActivity::class.java)
             startActivity((intent))
         }
         binding.btnSignUp.setOnClickListener {
